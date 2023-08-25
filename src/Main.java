@@ -3,9 +3,26 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Main {
     public static void main(String[] args) {
-        selecaoCandidatos();
+        imprimirSelecionador();
 
     }
+
+    static void imprimirSelecionador() {
+        String [] candidatos =  {"FELIPE", "JULIA", "WILLIAM", "ALEXIA", "JULIA", "ROBERTO", "SILVA", "MARIA", "ROBERTA"};
+
+        System.out.println("Imprimindo a lista de candidatos informando o indice.");
+
+        for (int indice=0; indice < candidatos.length; indice++) {
+            System.out.println("O candidatos de n° " + (indice + 1) + " é " + candidatos[indice]);
+        }
+
+//        System.out.println("Forma abreveada de interação for each");
+//
+//        for(String candidato : candidatos) {
+//            System.out.println("O candidato selecionado foi " + candidato);
+//        }
+    }
+
 
     static void selecaoCandidatos() {
         String [] candidatos = {"FELIPE", "JULIA", "WILLIAM", "ALEXIA", "JULIA", "ROBERTO", "SILVA", "MARIA", "ROBERTA"};
@@ -24,6 +41,7 @@ public class Main {
             candidatosAtual++;
         }
     }
+    /*Metodo que escolhe o salário pretendido aleatoriamente*/
 
     static double valorPretendido() {
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
